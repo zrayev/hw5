@@ -17,7 +17,8 @@
     },
   "autoload": {
     "psr-4": {
-      "Calculator\\": "src/Calculator"
+      "Calculator\\": "src/Calculator",
+      "Geron\\": "src/Geron"
     }
   }
 }
