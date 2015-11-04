@@ -5,10 +5,7 @@
  * Date: 03.11.15
  * Time: 22:42
  */
-//require_once 'vendor/autoload.php';
 use Calculator\Calculator;
-
-//use PHPUnit_Framework_TestCase;
 
 class CalculatorTest extends \PHPUnit_Framework_TestCase
 {
