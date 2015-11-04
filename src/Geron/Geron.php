@@ -15,9 +15,9 @@ class Geron
      * @param $c
      * @return float
      */
-    public function calcP ($a, $b, $c)
+    public function calcP($a, $b, $c)
     {
-        $p = ($a + $b +$c)/2;
+        $p = ($a + $b + $c) / 2;
         return $p;
     }
 
@@ -28,9 +28,9 @@ class Geron
      * @param $c
      * @return float
      */
-    public function calcGeron($p, $a, $b, $c)
+    public function calcGeron($a, $b, $c, $p)
     {
-        $s = sqrt($p*($p-$a)*($p-$b)*($p-$c));
+        $s = sqrt($p * ($p - $a) * ($p - $b) * ($p - $c));
         return $s;
     }
 }

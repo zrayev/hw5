@@ -28,9 +28,31 @@ class GeronTest extends \PHPUnit_Framework_TestCase
     public function calcPProvider()
     {
         return [
-            [6, 2, 3, 7 ],
+            [8, 4, 5, 7],
             [6, 2, 4, 6],
             [7, 4, 3, 7],
+        ];
+    }
+
+    /**
+     * @dataProvider calcGeronProvider
+     * @param $ex
+     * @param $a
+     * @param $b
+     * @param $c
+     * @param $p
+     */
+    public function testCalcGeron($ex, $a, $b, $c, $p)
+    {
+        $calc2 = new Geron();
+        $this->assertEquals($ex, $calc2->calcGeron($a, $b, $c, $p));
+    }
+
+    public function calcGeronProvider()
+    {
+        return [
+            //  [9, 4, 5, 7, 6],
+            [72, 5, 29, 30, 32],
         ];
     }
 }
