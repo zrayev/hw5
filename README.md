@@ -1,3 +1,5 @@
-# hw5
-hw5
-Testing PHP
+Homework 5
+Use:
+	-phpunit;
+	-travis ci.
+
