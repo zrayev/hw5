@@ -29,8 +29,6 @@ class GeronTest extends PHPUnit_Framework_TestCase
     {
         return [
             [8, 4, 5, 7],
-            [6, 2, 4, 6],
-            [7, 4, 3, 7],
         ];
     }
 
