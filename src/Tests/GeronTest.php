@@ -7,7 +7,7 @@
  */
 use Geron\Geron;
 
-class GeronTest extends \PHPUnit_Framework_TestCase
+class GeronTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider calcPProvider
@@ -46,6 +46,7 @@ class GeronTest extends \PHPUnit_Framework_TestCase
     {
         $calc2 = new Geron();
         $this->assertEquals($ex, $calc2->calcGeron($a, $b, $c, $p));
+        $this->assertTrue($ex == '72');
     }
 
     public function calcGeronProvider()
@@ -55,4 +56,26 @@ class GeronTest extends \PHPUnit_Framework_TestCase
             [72, 5, 29, 30, 32],
         ];
     }
+
+   /*  public function testCalcGeron2($ex, $a, $b, $c, $p)
+    {
+        $calc2 = new Geron();
+        $this->assertEquals($ex, $calc2->calcGeron($a, $b, $c, $p));
+        $this->assertTrue($ex == '72');
+    }
+*/
+/*
+
+    public function testFailure3()
+
+    {   $calc6 = new Geron();
+        $this->assertFalse($calc6->calcP($a));
+    }
+
+    public function testFailure3Provider()
+    {
+        return false;
+    }
+*/
+
 }
