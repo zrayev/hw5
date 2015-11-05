@@ -33,4 +33,19 @@ class Geron
         $s = sqrt($p * ($p - $a) * ($p - $b) * ($p - $c));
         return $s;
     }
+
+    /**
+     * @param $a
+     * @param $b
+     * @param $c
+     * @return array
+     */
+    public function testsValues($a, $b, $c)
+    {
+        $a1 = $a + $b;
+        $a2 = $a + $c;
+        $a3 = $c + $b;
+
+        return array($a1, $a2, $a3);
+    }
 }

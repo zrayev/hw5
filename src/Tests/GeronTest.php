@@ -57,25 +57,28 @@ class GeronTest extends PHPUnit_Framework_TestCase
         ];
     }
 
-   /*  public function testCalcGeron2($ex, $a, $b, $c, $p)
+
+    /**
+     * @dataProvider testtestsValuesPProvider
+     * @param $ex
+     * @param $a
+     * @param $b
+     * @param $c
+     */
+    public function testtestValues($ex, $a, $b, $c)
     {
-        $calc2 = new Geron();
-        $this->assertEquals($ex, $calc2->calcGeron($a, $b, $c, $p));
-        $this->assertTrue($ex == '72');
-    }
-*/
-/*
-
-    public function testFailure3()
-
-    {   $calc6 = new Geron();
-        $this->assertFalse($calc6->calcP($a));
+        $calc3 = new Geron();
+        $this->assertLessThanOrEqual($calc3->testsValues($a, $b, $c), $ex);
     }
 
-    public function testFailure3Provider()
+    /**
+     * @return array
+     */
+    public function testtestsValuesPProvider()
     {
-        return false;
+        return [
+            [[4, 5, 6], 4, 5, 6]
+        ];
     }
-*/
 
 }
