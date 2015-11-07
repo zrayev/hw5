@@ -9,7 +9,7 @@
   syntaxCheck                 = "false"
   bootstrap                   = "vendor/autoload.php">
   <testsuites>
-    <testsuite name="Geron">
+    <testsuite name="Tests">
       <directory>src/Tests</directory>
     </testsuite>
   </testsuites>

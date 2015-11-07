@@ -10,6 +10,28 @@ use Geron\Geron;
 class GeronTest extends PHPUnit_Framework_TestCase
 {
     /**
+     * @dataProvider checkProvider
+     * @param $a
+     * @param $b
+     * @param $c
+     */
+    public function testСheck($a, $b, $c)
+    {
+        $calc0 = new Geron();
+        $this->assertTrue($calc0->check($a, $b, $c));
+    }
+
+    /**
+     * @return array
+     */
+    public function checkProvider()
+    {
+        return [
+            [4, 5, 7],
+        ];
+    }
+
+    /**
      * @dataProvider calcPProvider
      * @param $ex
      * @param $a
@@ -47,6 +69,9 @@ class GeronTest extends PHPUnit_Framework_TestCase
         $this->assertTrue($ex == '72');
     }
 
+    /**
+     * @return array
+     */
     public function calcGeronProvider()
     {
         return [

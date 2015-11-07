@@ -9,6 +9,22 @@ namespace Geron;
 
 class Geron
 {
+
+    /**
+     * @param $a
+     * @param $b
+     * @param $c
+     * @return bool
+     */
+    public function check($a, $b, $c)
+    {
+        if ($a <= 0 || $b <= 0 || $c <= 0)
+            return FALSE;
+        else {
+            return TRUE;
+        }
+    }
+
     /**
      * @param $a
      * @param $b
