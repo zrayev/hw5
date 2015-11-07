@@ -42,6 +42,7 @@ class GeronTest extends PHPUnit_Framework_TestCase
     {
         $calc1 = new Geron();
         $this->assertEquals($ex, $calc1->calcP($a, $b, $c));
+        $this->assertCount(4, [8, 4, 5, 7]);
     }
 
     /**
@@ -67,6 +68,7 @@ class GeronTest extends PHPUnit_Framework_TestCase
         $calc2 = new Geron();
         $this->assertEquals($ex, $calc2->calcGeron($a, $b, $c, $p));
         $this->assertTrue($ex == '72');
+        $this->assertContains($ex, [72, 5, 29, 30, 32]);
     }
 
     /**
@@ -79,7 +81,6 @@ class GeronTest extends PHPUnit_Framework_TestCase
             [72, 5, 29, 30, 32],
         ];
     }
-
 
     /**
      * @dataProvider testtestsValuesPProvider
@@ -104,4 +105,12 @@ class GeronTest extends PHPUnit_Framework_TestCase
         ];
     }
 
+    /**
+     *
+     */
+    public function testMock()
+    {
+        $mock = $this->getMock('Geron');
+        $this->assertInstanceOf('Geron', $mock);
+    }
 }
