@@ -5,9 +5,10 @@
  * Date: 04.11.15
  * Time: 12:52
  */
-use Geron\Geron;
 
-class GeronTest extends PHPUnit_Framework_TestCase
+namespace Geron;
+
+class GeronTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider checkProvider
@@ -105,12 +106,13 @@ class GeronTest extends PHPUnit_Framework_TestCase
         ];
     }
 
-    /**
-     *
-     */
     public function testMock()
     {
-        $mock = $this->getMock('Geron');
-        $this->assertInstanceOf('Geron', $mock);
+        $mock = $this->getMock('Geron\Geron');
+        $mock->expects($this->once())
+            ->method('check')
+            ->will($this->returnValue(4, 5, 7));
+        $this->assertEquals($mock->check(4, 5, 7), TRUE);
     }
+
 }

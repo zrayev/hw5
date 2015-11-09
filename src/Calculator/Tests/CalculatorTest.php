@@ -5,7 +5,7 @@
  * Date: 03.11.15
  * Time: 22:42
  */
-use Calculator\Calculator;
+namespace Calculator;
 
 class CalculatorTest extends \PHPUnit_Framework_TestCase
 {

@@ -64,5 +64,4 @@ class Geron
 
         return array($a1, $a2, $a3);
     }
-
 }

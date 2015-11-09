@@ -9,8 +9,8 @@
   syntaxCheck                 = "false"
   bootstrap                   = "vendor/autoload.php">
   <testsuites>
-    <testsuite name="Tests">
-      <directory>src/Tests</directory>
+    <testsuite name="TestsGeron">
+      <directory>src/Geron/Tests</directory>
     </testsuite>
   </testsuites>
 </phpunit>
